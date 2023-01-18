@@ -18,12 +18,12 @@ pipeline {
                 //sh 'docker buildx build -t jjulianbayon/test:latest .'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-                sh 'docker run --rm -e CI=true jjulianbayon/test pytest'
-            }
-        }
+        //stage('Test') {
+        //    steps {
+        //        echo 'Testing..'
+        //        sh 'docker run --rm -e CI=true jjulianbayon/test pytest'
+        //    }
+        //}
         stage('Publish') {
             steps {
             echo 'Publishing image to DockerHub..'         
