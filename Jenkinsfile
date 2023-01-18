@@ -1,17 +1,17 @@
 pipeline {
     agent any
 
-    environment {
-        DOCKER_PASSWORD = credentials('DOCKER_PASSWORD')
-    }
-
++    environment {
++        DOCKER_ID = credentials('DOCKER_ID')
++        DOCKER_PASSWORD = credentials('DOCKER_PASSWORD')
++    }
     stages {
         stage('Init') {
             steps {
                 echo 'Initializing..'
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
                 echo "Current branch: ${env.BRANCH_NAME}"
-                sh 'echo $DOCKER_PASSWORD | docker login -u jjulianbayon --password-stdin'
+               sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_ID --password-stdin'
             }
         }
         stage('Build') {
