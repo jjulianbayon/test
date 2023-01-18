@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_ID = credentials('DOCKER_ID')
+        DOCKER_ID = credentials('jjulianbayon')
         DOCKER_PASSWORD = credentials('DOCKER_PASSWORD')
     }
 
