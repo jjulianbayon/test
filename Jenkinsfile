@@ -29,12 +29,12 @@ pipeline {
         }
         stage('Publish') {
             steps {
-                echo 'Publishing image to DockerHub..'
-                //sh 'docker push $DOCKER_ID/php:latest'
+            echo 'Publishing image to DockerHub..'
+            //sh 'docker push $DOCKER_ID/php:latest'
                 
--               //sh 'docker push $DOCKER_ID/cotu:latest'
-+               echo 'Building and publishing multi-arch image to DockerHub..'
-+               sh 'docker buildx build --push --platform linux/amd64,linux/arm64 -t $DOCKER_ID/labo:latest .'
+             //sh 'docker push $DOCKER_ID/cotu:latest'
+             echo 'Building and publishing multi-arch image to DockerHub..'
+             sh 'docker buildx build --push --platform linux/amd64,linux/arm64 -t $DOCKER_ID/labo:latest .'
             }
         }
         stage('Cleanup') {
