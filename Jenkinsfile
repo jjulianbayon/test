@@ -1,6 +1,6 @@
 DOCKER_REGISTRY = 'jjulianbayon'
-BUILDER_NAME = 'mbuilder'
-SERVICE = 'test'
+BUILDER_NAME = 'image-base'
+SERVICE = 'testarq'
 TAG = 'v0.1'
 
 pipeline {
