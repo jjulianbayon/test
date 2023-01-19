@@ -33,7 +33,7 @@ pipeline {
             }
         }
         stage ('Build multi-arch image'){
-            step {
+            steps {
                 sh """
                     docker buildx build --platform linux/amd64,linux/arm64 --push -t $DOCKER_REGISTRY/$SERVICE:$TAG .
                 """    
