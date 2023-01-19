@@ -1,6 +1,6 @@
 DOCKER_REGISTRY = 'jjulianbayon'
 BUILDER_NAME = 'mbuilder'
-SERVICE = 'testArq'
+SERVICE = 'test'
 TAG = 'v0.1'
 
 pipeline {
