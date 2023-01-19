@@ -1,9 +1,9 @@
 pipeline {
 
-    DOCKER_REGISTRY= 'jjulianbayon'
-    BUILDER_NAME= 'mbuilder'
-    SERVICE= 'testArq'
-    TAG= 'v0.1'
+    DOCKER_REGISTRY = 'jjulianbayon'
+    BUILDER_NAME = 'mbuilder'
+    SERVICE = 'testArq'
+    TAG = 'v0.1'
     agent any
 
     stages {
